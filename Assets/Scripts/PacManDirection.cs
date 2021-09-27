@@ -33,7 +33,7 @@ public class PacManDirection : StateMachineBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("CanTurn", true);
+            //animator.SetBool("CanTurn", true);// for debug, this bool should be true when PacMan hit a wall on the previous direction.
         }
     }
 
