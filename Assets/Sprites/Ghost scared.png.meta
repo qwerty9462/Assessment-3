@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 955dab47444ab0f48b63a3d3b1a177d8
+guid: 89919d5db44e75a43b9adc26c524781d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7830756064761055554
-    second: PacManDie_0
+      213: -3217926067899127367
+    second: Ghost scared_0
   - first:
-      213: 3850706184572776752
-    second: PacManDie_1
+      213: 8722595584320149852
+    second: Ghost scared_1
   - first:
-      213: 712916659708485999
-    second: PacManDie_2
+      213: 412983235219977472
+    second: Ghost scared_2
   - first:
-      213: -3956190005157165501
-    second: PacManDie_3
+      213: 2536089993609893761
+    second: Ghost scared_3
   - first:
-      213: 8814587013111620734
-    second: PacManDie_4
-  - first:
-      213: -8678476256259659143
-    second: PacManDie_5
-  - first:
-      213: 7196037331760148056
-    second: PacManDie_6
-  - first:
-      213: -1372029979832772250
-    second: PacManDie_7
+      213: -5343773651628073069
+    second: Ghost scared_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PacManDie_0
+      name: Ghost scared_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 71
-        width: 18
-        height: 18
+        x: 8
+        y: 74
+        width: 16
+        height: 14
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb67e2529d0935390800000000000000
-      internalID: -7830756064761055554
+      spriteID: 9b927616a41a753d0800000000000000
+      internalID: -3217926067899127367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManDie_1
+      name: Ghost scared_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 71
-        width: 18
-        height: 18
+        x: 40
+        y: 74
+        width: 16
+        height: 14
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0313cd97fd4707530800000000000000
-      internalID: 3850706184572776752
+      spriteID: c591bca3872ec0970800000000000000
+      internalID: 8722595584320149852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManDie_2
+      name: Ghost scared_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 71
-        width: 18
-        height: 18
+        x: 8
+        y: 42
+        width: 16
+        height: 14
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f61e160cce9c4e900800000000000000
-      internalID: 712916659708485999
+      spriteID: 0057a7970163bb500800000000000000
+      internalID: 412983235219977472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManDie_3
+      name: Ghost scared_3
       rect:
         serializedVersion: 2
-        x: 7
-        y: 39
-        width: 18
-        height: 18
+        x: 40
+        y: 42
+        width: 16
+        height: 14
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34608aea62ac819c0800000000000000
-      internalID: -3956190005157165501
+      spriteID: 1875a839960023320800000000000000
+      internalID: 2536089993609893761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManDie_4
+      name: Ghost scared_4
       rect:
         serializedVersion: 2
-        x: 39
-        y: 39
-        width: 18
-        height: 18
+        x: 8
+        y: 10
+        width: 16
+        height: 14
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,71 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e742a4ecf24b35a70800000000000000
-      internalID: 8814587013111620734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PacManDie_5
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 39
-        width: 18
-        height: 18
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97a2bf153dbdf8780800000000000000
-      internalID: -8678476256259659143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PacManDie_6
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 7
-        width: 18
-        height: 18
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85e6306b3d57dd360800000000000000
-      internalID: 7196037331760148056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PacManDie_7
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 7
-        width: 18
-        height: 18
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66991eea00295fce0800000000000000
-      internalID: -1372029979832772250
+      spriteID: 39fdd962d2a17d5b0800000000000000
+      internalID: -5343773651628073069
       vertices: []
       indices: 
       edges: []
