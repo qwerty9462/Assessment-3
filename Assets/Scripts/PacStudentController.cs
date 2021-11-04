@@ -22,6 +22,8 @@ public class PacStudentController : MonoBehaviour
     private GridLayout gridLayout;
     [SerializeField]
     private Tilemap map;
+    //[SerializeField]
+    //private Effector2D dust;
 
     private Tweener tweener;
     private Vector3 nextCell;
@@ -117,6 +119,7 @@ public class PacStudentController : MonoBehaviour
                 if (!Audio.isPlaying) Audio.Play();
                 Audio.loop = true;
                 anim.SetBool("CanTurn", true);
+                GameObject.Find("dust").GetComponent<ParticleSystem>().Play();
             }
             else if (!canMove && Audio.clip != hitWall)
             {
@@ -124,6 +127,7 @@ public class PacStudentController : MonoBehaviour
                 Audio.Play();
                 Audio.loop = false;
                 anim.SetBool("CanTurn", false);
+                GameObject.Find("dust").GetComponent<ParticleSystem>().Stop();
             }
         }
 
