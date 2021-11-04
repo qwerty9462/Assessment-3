@@ -27,7 +27,7 @@ public class PacStudentController : MonoBehaviour
     private Vector3 nextCell;
     private Animator anim;
     private Vector3 moveDir;
-    //private float step;    
+   
     private bool canMove;
     private bool isDead;
     private Vector3 lastInput;
@@ -35,10 +35,6 @@ public class PacStudentController : MonoBehaviour
 
     private GameObject temp;
 
-
-    //private char currentInput;
-
-    //private float goflag = 0f;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -50,7 +46,7 @@ public class PacStudentController : MonoBehaviour
     }
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();
 
         tweener = GetComponent<Tweener>();
         lastInput = Vector3Int.right;
@@ -88,11 +84,8 @@ public class PacStudentController : MonoBehaviour
 
         if (transform.position == nextCell || !canMove)
         {
-            if (!canMove)
-            {
-                Audio.clip = hitWall;
-                if(!Audio.isPlaying)Audio.Play();
-            }
+
+            
              nextCell = transform.position + moveDir * 0.18f;
             if (map.GetTile(gridLayout.LocalToCell(nextCell)).name.Equals("Walls_0"))
             {
@@ -118,6 +111,20 @@ public class PacStudentController : MonoBehaviour
             Debug.Log(nextCell);
             if (canMove) tweener.AddTween(transform, transform.position, nextCell, 1f/speed);
 
+            if (canMove)
+            {
+                Audio.clip = notEating;
+                if (!Audio.isPlaying) Audio.Play();
+                Audio.loop = true;
+                anim.SetBool("CanTurn", true);
+            }
+            else if (!canMove && Audio.clip != hitWall)
+            {
+                Audio.clip = hitWall;
+                Audio.Play();
+                Audio.loop = false;
+                anim.SetBool("CanTurn", false);
+            }
         }
 
     }
