@@ -33,14 +33,14 @@ public class PacManDirection : StateMachineBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("CanTurn", true);// for debug, this bool should be true when PacMan hit a wall on the previous direction.
+            //animator.SetBool("CanTurn", true);// for debug, this bool should be true when PacMan hit a wall on the previous direction.
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("CanTurn",false);
+        animator.SetBool("CanTurn",true);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
