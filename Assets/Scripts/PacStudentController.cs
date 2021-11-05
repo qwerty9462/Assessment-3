@@ -74,6 +74,7 @@ public class PacStudentController : MonoBehaviour
         int milisecond = (int)((time - (int)time) * 100);
         var text = string.Format("{0:D2}:{1:D2}:{2:D2}", minute, second, milisecond);
         //Debug.Log(text);
+
         GameObject.Find("Timer").GetComponent<Text>().text = text;
         if (Input.GetKeyDown(KeyCode.A))
         {
