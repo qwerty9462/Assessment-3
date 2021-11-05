@@ -818,7 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifes: 3
   lifeIcon: {fileID: 7070576545582528314, guid: 2e53cab4694f6e945b0a282b8ce22eac, type: 3}
-  changed: 0
+  changed: 1
 --- !u!1 &988988385
 GameObject:
   m_ObjectHideFlags: 0
@@ -6450,7 +6450,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
