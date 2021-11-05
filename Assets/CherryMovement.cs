@@ -18,7 +18,7 @@ public class CherryMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += aim.normalized * Time.fixedDeltaTime;
+        transform.position += aim.normalized * Time.fixedDeltaTime * 0.5f;
     }
     public void OnBecameInvisible()
     {

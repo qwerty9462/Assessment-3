@@ -141,18 +141,31 @@ public class PacStudentController : MonoBehaviour
         {
             Score += 10;
             Debug.Log("score + 10");
+            Audio.clip = eating;
+            Audio.Play();
+            Audio.loop = false;
+            Destroy(other.gameObject);
         }
         if (other.name == "Power pellet(Clone)")
         {
-            Score += 10;
-            Debug.Log("score + 10");
+            Destroy(other.gameObject);
         }
-        if (other.name == "Cherry")
+        if (other.name == "cherry(Clone)")
         {
             Score += 100;
             Debug.Log("score + 10");
+            Audio.clip = eating;
+            Audio.Play();
+            Audio.loop = false;
+            Destroy(other.gameObject);
+            Destroy(other.gameObject);
+        }
+        if (other.name.StartsWith("Ghost"))
+        {
+            Audio.clip = dead;
+            Audio.Play();
+            Audio.loop = false;
         }
 
-        Destroy(other.gameObject);
     }
 }
