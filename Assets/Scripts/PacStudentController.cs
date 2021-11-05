@@ -37,6 +37,8 @@ public class PacStudentController : MonoBehaviour
     private Vector3 lastInput;
     private Vector3 currentInput;
 
+    float time;
+
     private GameObject temp;
 
     // Start is called before the first frame update
@@ -66,7 +68,13 @@ public class PacStudentController : MonoBehaviour
     {
         //Debug.Log(map.GetTile(gridLayout.LocalToCell(nextCell)));
         GameObject.Find("CurrentScore").GetComponent<Text>().text = Score.ToString();
-
+        time += Time.deltaTime;
+        int minute = (int)time / 60;
+        int second = (int)(time - minute * 60);
+        int milisecond = (int)((time - (int)time) * 100);
+        var text = string.Format("{0:D2}:{1:D2}:{2:D2}", minute, second, milisecond);
+        //Debug.Log(text);
+        GameObject.Find("Timer").GetComponent<Text>().text = text;
         if (Input.GetKeyDown(KeyCode.A))
         {
             lastInput = Vector3Int.left;
@@ -84,9 +92,7 @@ public class PacStudentController : MonoBehaviour
             lastInput = Vector3Int.up;
         }
         moveDir = lastInput;
-
-        
-
+    
         if (transform.position == nextCell || !canMove)
         {
 
@@ -133,6 +139,8 @@ public class PacStudentController : MonoBehaviour
                 GameObject.Find("dust").GetComponent<ParticleSystem>().Stop();
             }
         }
+
+        
 
     }
     void OnTriggerEnter(Collider other)
