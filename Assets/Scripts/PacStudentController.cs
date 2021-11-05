@@ -162,9 +162,14 @@ public class PacStudentController : MonoBehaviour
         }
         if (other.name.StartsWith("Ghost"))
         {
+            anim.Play("PacManDie");
+            canMove = false;
             Audio.clip = dead;
+            GameObject.Find("Life").GetComponent<lifeInd>().lifes -= 1;
+            GameObject.Find("Life").GetComponent<lifeInd>().changed = true;
             Audio.Play();
             Audio.loop = false;
+            isDead = true;
         }
 
     }
