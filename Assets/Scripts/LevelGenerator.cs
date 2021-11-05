@@ -18,7 +18,7 @@ public class LevelGenerator : MonoBehaviour
     //public Grid map;
     void Start()
     {
-        Destroy(oldmap);
+        //Destroy(oldmap);
         generate();
     }
 

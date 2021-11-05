@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
 public class PacStudentController : MonoBehaviour
@@ -29,7 +30,8 @@ public class PacStudentController : MonoBehaviour
     private Vector3 nextCell;
     private Animator anim;
     private Vector3 moveDir;
-   
+    private int Score = 0;
+
     private bool canMove;
     private bool isDead;
     private Vector3 lastInput;
@@ -62,7 +64,8 @@ public class PacStudentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(map.GetTile(gridLayout.LocalToCell(nextCell)));
+        //Debug.Log(map.GetTile(gridLayout.LocalToCell(nextCell)));
+        GameObject.Find("CurrentScore").GetComponent<Text>().text = Score.ToString();
 
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -131,5 +134,25 @@ public class PacStudentController : MonoBehaviour
             }
         }
 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.name == "Normal pellet(Clone)")
+        {
+            Score += 10;
+            Debug.Log("score + 10");
+        }
+        if (other.name == "Power pellet(Clone)")
+        {
+            Score += 10;
+            Debug.Log("score + 10");
+        }
+        if (other.name == "Cherry")
+        {
+            Score += 100;
+            Debug.Log("score + 10");
+        }
+
+        Destroy(other.gameObject);
     }
 }
